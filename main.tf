@@ -2,7 +2,7 @@ provider "aws" {
   profile = "<FM1_1>"
   region  = "<FM1_2>"
 }
-
+# S2 bucket
 resource "aws_s3_bucket" "lab_bucket" {
   bucket = "<FM1_3>"
 
@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "lab_bucket" {
     Environment = "Lab"
   }
 }
-
+# EC2
 resource "aws_instance" "lab_ec2" {
   ami           = "ami-0c02fb55956c7d316"
   instance_type = "<FM1_4>"
@@ -21,7 +21,7 @@ resource "aws_instance" "lab_ec2" {
     Environment = "Lab"
   }
 }
-
+# IAM
 resource "aws_iam_user" "lab_user" {
   name = "<FM1_5>"
 
