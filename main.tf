@@ -2,7 +2,7 @@ provider "aws" {
   profile = "<FM1_1>"
   region  = "<FM1_2>"
 }
-# S2 bucket
+# S3 bucket
 resource "aws_s3_bucket" "lab_bucket" {
   bucket = "<FM1_3>"
 
